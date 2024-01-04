@@ -1,0 +1,9 @@
+body {
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  overflow: hidden;
+
+  background-color: #b4a7d6;
+  font-family: Arial, Helvetica, sans-serif;
+}
