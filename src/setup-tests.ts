@@ -1,21 +1,8 @@
 import '@testing-library/jest-dom';
-import { server } from '../../src/mocks/node';
+import { server } from './mocks/node';
+import { createCache } from './utils/test-utils';
 
-window.matchMedia = (query) => ({
-  matches: false,
-  media: query,
-  onchange: null,
-  addEventListener: jest.fn(),
-  removeEventListener: jest.fn(),
-  dispatchEvent: jest.fn(),
-  addListener: jest.fn(),
-  removeListener: jest.fn(),
-});
-
-Object.defineProperty(URL, 'createObjectURL', {
-  writable: true,
-  value: jest.fn(),
-});
+const queryCache = createCache();
 
 beforeAll(() => {
   // Enable API mocking before all the tests.
@@ -27,6 +14,8 @@ afterEach(() => {
   // This way the handlers we add on a per-test basis
   // do not leak to other, irrelevant tests.
   server.resetHandlers();
+
+  queryCache.clear();
 });
 
 afterAll(() => {
