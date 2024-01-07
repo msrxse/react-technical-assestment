@@ -1,15 +1,17 @@
-import { http } from 'msw';
+import { http, HttpResponse } from 'msw';
+
+const todoItem = {
+  name: 'Query',
+  description:
+    '🤖 Powerful asynchronous state management, server-state utilities and data fetching for the web. TS/JS, React Query, Solid Query, Svelte Query and Vue Query.',
+  subscribers_count: 'subscribers_count',
+  forks_count: 'forks_count',
+};
 
 export const handlers = [
-  http.get('https://https://jsonplaceholder.typicode.com/todos/1', (_, res, ctx) => {
-    return res(
-      ctx.status(200),
-      ctx.json({
-        userId: 1,
-        id: 1,
-        title: 'delectus aut autem',
-        completed: false,
-      }),
-    );
+  http.get('/todos/1', () => {
+    return HttpResponse.json(todoItem);
   }),
+
+  // ...other request handlers.
 ];
