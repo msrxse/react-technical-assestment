@@ -1,24 +1,25 @@
-import '@testing-library/jest-dom';
-import { server } from './mocks/node';
-import { createCache } from './utils/test-utils';
+import '@testing-library/jest-dom'
 
-const queryCache = createCache();
+import { server } from '@/mocks/node'
+import { createCache } from '@/utils/test-utils'
+
+const queryCache = createCache()
 
 beforeAll(() => {
   // Enable API mocking before all the tests.
-  server.listen();
-});
+  server.listen()
+})
 
 afterEach(() => {
   // Reset the request handlers between each test.
   // This way the handlers we add on a per-test basis
   // do not leak to other, irrelevant tests.
-  server.resetHandlers();
+  server.resetHandlers()
 
-  queryCache.clear();
-});
+  queryCache.clear()
+})
 
 afterAll(() => {
   // Finally, disable API mocking after the tests are done.
-  server.close();
-});
+  server.close()
+})

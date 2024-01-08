@@ -1,17 +1,17 @@
-import { useQuery } from '@tanstack/react-query';
-import axios from 'axios';
+import { useQuery } from '@tanstack/react-query'
+import axios from 'axios'
 
-import styles from './Welcome.module.css';
+import styles from './Welcome.module.css'
 
 export default function Welcome() {
   const { isPending, error, data, isFetching } = useQuery({
     queryKey: ['repoData'],
     queryFn: () => axios.get('/todos/1').then((res) => res.data),
-  });
+  })
 
-  if (isPending) return 'Loading...';
+  if (isPending) return 'Loading...'
 
-  if (error) return 'An error has occurred: ' + error.message;
+  if (error) return 'An error has occurred: ' + error.message
 
   return (
     <div className={styles.welcome}>
@@ -21,5 +21,5 @@ export default function Welcome() {
       <strong>🍴 {data.forks_count}</strong>
       <div>{isFetching ? 'Updating...' : ''}</div>
     </div>
-  );
+  )
 }

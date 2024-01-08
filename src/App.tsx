@@ -1,9 +1,9 @@
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import Welcome from './components/Welcome';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
-import styles from './App.module.css';
+import styles from './App.module.css'
+import Welcome from './components/Welcome'
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient()
 
 export const App = () => {
   return (
@@ -12,7 +12,7 @@ export const App = () => {
         <Welcome />
       </div>
     </QueryClientProvider>
-  );
-};
+  )
+}
 
-export default App;
+export default App
