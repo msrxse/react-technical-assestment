@@ -1,16 +1,41 @@
 import { HttpResponse, http } from 'msw'
 
-const todoItem = {
-  name: 'Query',
+const todoItems = [{
+  id: '1',
+  name: 'Query 1',
   description:
     '🤖 Powerful asynchronous state management, server-state utilities and data fetching for the web. TS/JS, React Query, Solid Query, Svelte Query and Vue Query.',
-  subscribers_count: 'subscribers_count',
-  forks_count: 'forks_count',
-}
+  subscribers_count: 187281,
+  forks_count: 78,
+},
+{
+  id: '2',
+  name: 'Query 2',
+  description:
+    '🤖 Powerful asynchronous state management, server-state utilities and data fetching for the web. TS/JS, React Query, Solid Query, Svelte Query and Vue Query.',
+  subscribers_count: 8971,
+  forks_count: 98,
+},
+{
+  id: '3',
+  name: 'Query 3',
+  description:
+    '🤖 Powerful asynchronous state management, server-state utilities and data fetching for the web. TS/JS, React Query, Solid Query, Svelte Query and Vue Query.',
+  subscribers_count: 7431,
+  forks_count: 96,
+},
+{
+  id: '4',
+  name: 'Query 4',
+  description:
+    '🤖 Powerful asynchronous state management, server-state utilities and data fetching for the web. TS/JS, React Query, Solid Query, Svelte Query and Vue Query.',
+  subscribers_count: 656769,
+  forks_count: 4,
+}]
 
 export const handlers = [
-  http.get('/todos/1', () => {
-    return HttpResponse.json(todoItem)
+  http.get('/matches', () => {
+    return HttpResponse.json(todoItems)
   }),
 
   // ...other request handlers.

@@ -1,0 +1,9 @@
+.matches {
+  height: 50vh;
+  overflow-y: scroll;
+  margin-left: 1em;
+}
+
+.matches>h1 {
+  color: brown;
+}

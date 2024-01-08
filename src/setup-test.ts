@@ -2,6 +2,7 @@ import '@testing-library/jest-dom'
 
 import { server } from '@/mocks/node'
 import { createCache } from '@/utils/test-utils'
+import { afterAll, afterEach, beforeAll } from 'vitest'
 
 const queryCache = createCache()
 

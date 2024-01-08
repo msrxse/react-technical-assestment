@@ -1,7 +1,7 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 
 import styles from './App.module.css'
-import Welcome from './components/Welcome'
+import Welcome from './components/Matches'
 
 const queryClient = new QueryClient()
 

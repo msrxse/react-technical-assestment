@@ -1,20 +1,18 @@
-// import { render, screen, waitFor, waitForElementToBeRemoved } from '@testing-library/react'
 import { HttpResponse, http } from 'msw'
 
 import { server } from '@/mocks/node'
 import { renderWithQueryClient } from '@/utils/test-utils'
 
-import Welcome from './Welcome'
+import Matches from './Matches'
 
-describe('Welcome', () => {
+describe('Matches', () => {
   it('should render matches', async () => {
-    const result = renderWithQueryClient(<Welcome />)
-
+    const result = renderWithQueryClient(<Matches />)
     const team01 = await result.findByText(/Powerful asynchronous state management/i)
     expect(team01).toBeInTheDocument()
   })
   it('should render loading state', async () => {
-    const result = renderWithQueryClient(<Welcome />)
+    const result = renderWithQueryClient(<Matches />)
     const loading = await result.findByText(/Loading/i)
     expect(loading).toBeInTheDocument()
   })
@@ -24,9 +22,8 @@ describe('Welcome', () => {
         return new HttpResponse(null, { status: 500 })
       }),
     )
-    const result = renderWithQueryClient(<Welcome />)
+    const result = renderWithQueryClient(<Matches />)
     const error = await result.findByText(/Error/i)
     expect(error).toBeInTheDocument()
-    // screen.debug();
   })
 })
