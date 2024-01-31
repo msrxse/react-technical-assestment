@@ -52,5 +52,9 @@
 
   // Terminal
   "terminal.integrated.shell.linux": "zsh",
-  "terminal.integrated.showExitAlert": false
+  "terminal.integrated.showExitAlert": false,
+
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false
 }

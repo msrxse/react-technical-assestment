@@ -5,10 +5,23 @@ This template provides a minimal setup to get React working in Vite with HMR and
 To start development server:
 
 ```
-yarn run dev
+pnpm run dev
 ```
 
 Next, open your browser and visit http://localhost:5173/. The default React project will be running on port 5173.
+
+## Tests
+
+```pnpm test:watch
+
+```
+
+or
+
+```
+pnpm test:watch <path-to-file>
+
+```
 
 ## Tooling:
 
@@ -42,7 +55,7 @@ export default {
     project: ['./tsconfig.json', './tsconfig.node.json'],
     tsconfigRootDir: __dirname,
   },
-};
+}
 ```
 
 - Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
