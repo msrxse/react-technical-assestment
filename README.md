@@ -32,6 +32,11 @@ pnpm test:watch <path-to-file>
 - **Vitest:** Modern testing framework
 - **MSW:** Mock Service Worker (MSW) is an API mocking library for browser and Node.js. See [stop mocking fetch](https://kentcdodds.com/blog/stop-mocking-fetch). With MSW, you can intercept outgoing requests, observe them, and respond to them using mocked responses. MSW can integrate throughout your entire stack, allowing you to reuse and customize network behavior on demand. Imagine using the same API mocks during development, integration and end-to-end testing, and then in your Storybook or during a live demo.
 
+## TODOS
+
+- [ ] Add commitlint (Helps team adhere to a commit convention)
+- [ ] ...
+
 ## Useful links
 
 - [How to set up a react project with vite](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-react-project-with-vite)
