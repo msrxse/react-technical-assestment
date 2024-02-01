@@ -10,6 +10,6 @@ const props = {
 describe('SVGFileIcon', () => {
   it('should render when props given', () => {
     render(<SVGFileIcon icon={props} />)
-    expect(screen.getByRole('img', { name: /filetype icon/iu })).toBeInTheDocument()
+    expect(screen.getByRole('img', { name: /filetype icon/i })).toBeInTheDocument()
   })
 })

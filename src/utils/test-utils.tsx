@@ -32,7 +32,9 @@ const createQueryHookWrapper = () => {
 const renderWithQueryClient = (component: React.ReactElement) => {
   const queryClient = createTestClient()
   const { rerender, ...rest } = render(
-    <QueryClientProvider client={queryClient}>{component}</QueryClientProvider>,
+    <QueryClientProvider client={queryClient}>
+      <WorkspaceProvider>{component}</WorkspaceProvider>
+    </QueryClientProvider>,
   )
   return {
     ...rest,

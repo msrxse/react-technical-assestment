@@ -1,21 +1,12 @@
 import { useEffect, useState } from 'react'
 
-import { TreeItem } from '@mui/x-tree-view/TreeItem'
-import { TreeView } from '@mui/x-tree-view/TreeView'
-
-import SVGFileIcon, { getIcon } from '@/components/SVGFileIcon/SVGFileIcon'
 import { useMenu } from '@/hooks/menu'
+import FileTree from '@/scenes/Workspace/FileTree/FileTree'
 
 import MonacoEditor from './Editor/Editor'
 import styles from './Workspace.module.css'
 import { edit, init, useWorkspace } from './context/workspaceContext'
-
-interface RenderTree {
-  id: string
-  name: string
-  contents?: string
-  children?: readonly RenderTree[]
-}
+import { RenderTree } from './types'
 
 const getLanguageFromFilePath = (filePath: string) => {
   if (filePath.endsWith('.html')) {
@@ -43,47 +34,16 @@ export default function Workspace() {
     }
   }, [dispatch, data])
 
-  const onSingleClick = (nodes: RenderTree) => {
-    if (nodes.contents) {
-      return setActiveFile(nodes)
-    }
-
-    return null
-  }
-
   if (isPending) return 'Loading...'
 
   if (error) return 'An error has occurred: ' + error.message
 
-  const renderTree = (nodes: RenderTree) => {
-    if (!nodes) {
-      return null
-    }
-
-    const icon = getIcon(nodes.name)
-
-    return (
-      <div key={nodes.id}>
-        <TreeItem
-          key={nodes.id}
-          nodeId={nodes.id}
-          label={nodes.name}
-          icon={<SVGFileIcon icon={icon} />}
-          onClick={() => onSingleClick(nodes)}
-        >
-          {Array.isArray(nodes.children) ? nodes.children.map((node) => renderTree(node)) : null}
-        </TreeItem>
-      </div>
-    )
-  }
-
   return (
     <div className={styles.workspace}>
       <div className={styles.fileMenu}>
-        <TreeView aria-label="rich object" defaultExpanded={['1 - 0']}>
-          {renderTree(state.data[0])}
-        </TreeView>
+        <FileTree setActiveFile={setActiveFile} />
       </div>
+
       <div className={styles.editor}>
         {activeFile && activeFile.contents ? (
           <MonacoEditor

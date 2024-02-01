@@ -2,12 +2,8 @@ import { createContext, useContext, useReducer } from 'react'
 
 import { Menu } from '@/types/menu'
 
-interface RenderTree {
-  id: string
-  name: string
-  contents?: string
-  children?: readonly RenderTree[]
-}
+import { RenderTree } from '../types'
+
 type Action =
   | { type: 'init'; payload: Menu[] }
   | {
