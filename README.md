@@ -2,17 +2,25 @@
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
+To install dependencies use:
+
+```
+pnpm install
+```
+
 To start development server:
 
 ```
-pnpm run dev
+pnpm dev
+
 ```
 
 Next, open your browser and visit http://localhost:5173/. The default React project will be running on port 5173.
 
 ## Tests
 
-```pnpm test:watch
+```
+pnpm test:watch
 
 ```
 

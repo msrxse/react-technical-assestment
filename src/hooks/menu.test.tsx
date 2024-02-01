@@ -2,11 +2,11 @@ import { renderHook, waitFor } from '@testing-library/react'
 
 import { createQueryHookWrapper } from '@/utils/test-utils'
 
-import { useMatches } from './matches'
+import { useMenu } from './menu'
 
-describe('useMatches', () => {
-  it('should return matches', async () => {
-    const { result } = renderHook(() => useMatches(), {
+describe('useMenu', () => {
+  it('should return menu', async () => {
+    const { result } = renderHook(() => useMenu(), {
       wrapper: createQueryHookWrapper(),
     })
 
