@@ -61,6 +61,7 @@
     "prettier": "^3.1.1",
     "stylelint": "^16.1.0",
     "stylelint-config-prettier": "^9.0.5",
+    "stylelint-config-standard": "^36.0.0",
     "typescript": "^5.2.2",
     "vite": "^5.0.8",
     "vite-plugin-monaco-editor": "^1.1.0",

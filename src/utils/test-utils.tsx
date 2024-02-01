@@ -1,6 +1,8 @@
 import { QueryCache, QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { render } from '@testing-library/react'
 
+import { WorkspaceProvider } from '@/scenes/Workspace/context/workspaceContext'
+
 type WrapperProps = { children: React.ReactNode }
 
 const createCache = () => new QueryCache()
@@ -19,7 +21,9 @@ const createQueryHookWrapper = () => {
   const queryClient = createTestClient()
 
   const wrapper = ({ children }: WrapperProps) => (
-    <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
+    <QueryClientProvider client={queryClient}>
+      <WorkspaceProvider>{children}</WorkspaceProvider>
+    </QueryClientProvider>
   )
 
   return wrapper

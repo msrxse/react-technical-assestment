@@ -124,6 +124,9 @@ devDependencies:
   stylelint-config-prettier:
     specifier: ^9.0.5
     version: 9.0.5(stylelint@16.2.0)
+  stylelint-config-standard:
+    specifier: ^36.0.0
+    version: 36.0.0(stylelint@16.2.0)
   typescript:
     specifier: ^5.2.2
     version: 5.3.3
@@ -6459,6 +6462,25 @@ packages:
       stylelint: '>= 11.x < 15'
     dependencies:
       stylelint: 16.2.0(typescript@5.3.3)
+    dev: true
+
+  /stylelint-config-recommended@14.0.0(stylelint@16.2.0):
+    resolution: {integrity: sha512-jSkx290CglS8StmrLp2TxAppIajzIBZKYm3IxT89Kg6fGlxbPiTiyH9PS5YUuVAFwaJLl1ikiXX0QWjI0jmgZQ==}
+    engines: {node: '>=18.12.0'}
+    peerDependencies:
+      stylelint: ^16.0.0
+    dependencies:
+      stylelint: 16.2.0(typescript@5.3.3)
+    dev: true
+
+  /stylelint-config-standard@36.0.0(stylelint@16.2.0):
+    resolution: {integrity: sha512-3Kjyq4d62bYFp/Aq8PMKDwlgUyPU4nacXsjDLWJdNPRUgpuxALu1KnlAHIj36cdtxViVhXexZij65yM0uNIHug==}
+    engines: {node: '>=18.12.0'}
+    peerDependencies:
+      stylelint: ^16.1.0
+    dependencies:
+      stylelint: 16.2.0(typescript@5.3.3)
+      stylelint-config-recommended: 14.0.0(stylelint@16.2.0)
     dev: true
 
   /stylelint@16.2.0(typescript@5.3.3):

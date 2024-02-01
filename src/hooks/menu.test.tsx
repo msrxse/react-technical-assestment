@@ -12,6 +12,6 @@ describe('useMenu', () => {
 
     await waitFor(() => expect(result.current.isSuccess).toBe(true))
 
-    expect(result.current.data).toHaveLength(4)
+    expect(result.current.data).toHaveLength(8)
   })
 })

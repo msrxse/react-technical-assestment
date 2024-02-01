@@ -1,19 +1,18 @@
 .workspace {
   height: 100%;
   width: 100%;
-  overflow-y: scroll;
   background-color: lightgray;
   display: flex;
 }
 
 .fileMenu {
-  flex: 0.5;
-  margin: 1em;
+  flex: 1;
   border: 1px solid #000;
+  overflow-y: auto;
 }
 
 .editor {
   flex: 1;
-  margin: 1em;
+  display: flex;
   border: 1px solid #000;
 }
