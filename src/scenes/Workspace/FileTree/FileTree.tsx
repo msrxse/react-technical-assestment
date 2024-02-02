@@ -2,17 +2,17 @@ import { TreeItem } from '@mui/x-tree-view/TreeItem'
 import { TreeView } from '@mui/x-tree-view/TreeView'
 
 import SVGFileIcon, { getIcon } from '@/components/SVGFileIcon/SVGFileIcon'
+import { useWorkspace } from '@/scenes/Workspace/context/workspaceContext'
+import { RenderTree } from '@/scenes/Workspace/types'
 
-import { useWorkspace } from '../context/workspaceContext'
-import { RenderTree } from '../types'
 import styles from './fileTree.module.css'
 
 interface FileTreeProps {
   setActiveFile: React.Dispatch<React.SetStateAction<RenderTree | undefined>>
 }
 
-export default function FileTree({ setActiveFile }: FileTreeProps) {
-  const { state, dispatch } = useWorkspace()
+function FileTree({ setActiveFile }: FileTreeProps) {
+  const { state } = useWorkspace()
 
   const onSingleClick = (nodes: RenderTree) => {
     if (nodes.contents) {
@@ -52,3 +52,5 @@ export default function FileTree({ setActiveFile }: FileTreeProps) {
     </div>
   )
 }
+
+export default FileTree

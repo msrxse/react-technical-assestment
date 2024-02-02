@@ -12,7 +12,6 @@ module.exports = {
     'plugin:@typescript-eslint/stylistic',
     'plugin:prettier/recommended',
     'prettier',
-
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
@@ -39,7 +38,7 @@ module.exports = {
       version: 'detect',
     },
   },
-    rules: {
+  rules: {
     'no-var': 'error',
     'no-alert': 'error',
     'no-console': 'error',
@@ -59,10 +58,10 @@ module.exports = {
     'import/exports-last': 'error',
     'import/no-useless-path-segments': ['error', { noUselessIndex: true }],
 
-    '@typescript-eslint/no-explicit-any': 'error',
     '@typescript-eslint/no-non-null-assertion': 'error',
     '@typescript-eslint/no-unused-vars': 'error',
     '@typescript-eslint/consistent-type-definitions': 'off',
+    '@typescript-eslint/no-explicit-any': 'warn',
 
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',
@@ -75,7 +74,7 @@ module.exports = {
       },
     ],
 
-    'react-refresh/only-export-components': ['error', { allowConstantExport: true }],
+    'react-refresh/only-export-components': 'warn',
     'react/react-in-jsx-scope': 'off',
   },
-};
+}

@@ -21,7 +21,7 @@ const getLanguageFromFilePath = (filePath: string) => {
 }
 
 export default function Workspace() {
-  const { state, dispatch } = useWorkspace()
+  const { dispatch } = useWorkspace()
   const { isPending, error, data } = useMenu()
   const [activeFile, setActiveFile] = useState<RenderTree | undefined>()
 

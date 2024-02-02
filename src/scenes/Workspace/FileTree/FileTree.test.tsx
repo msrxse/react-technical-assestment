@@ -1,11 +1,11 @@
 import { fireEvent, screen } from '@testing-library/react'
 
+import { useWorkspace } from '@/scenes/Workspace/context/workspaceContext'
 import { renderWithQueryClient } from '@/utils/test-utils'
 
-import { useWorkspace } from '../context/workspaceContext'
 import FileTree from './FileTree'
 
-vitest.mock('../context/workspaceContext')
+vitest.mock('@/scenes/Workspace/context/workspaceContext')
 const mockUseWorkspace = useWorkspace as jest.MockedFunction<typeof useWorkspace>
 const state = {
   editedMenuData: [

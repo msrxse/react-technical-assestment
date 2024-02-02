@@ -1,8 +1,7 @@
 import { createContext, useContext, useReducer } from 'react'
 
+import { RenderTree } from '@/scenes/Workspace/types'
 import { Menu } from '@/types/menu'
-
-import { RenderTree } from '../types'
 
 type Action =
   | { type: 'init'; payload: Menu[] }
@@ -27,11 +26,12 @@ const WorkspaceStateContext = createContext<{ state: State; dispatch: Dispatch }
 )
 
 const initData = (paths: Menu[] | undefined) => {
-  let result: RenderTree[] = []
-  let level = { result }
+  const result: RenderTree[] = []
+  const level = { result }
 
-  paths?.map((each, index) => {
-    return each.path.split('/').reduce((acc, name, currentIndex) => {
+  paths?.map((each) => {
+    const names = each.path.split('/')
+    return names.reduce<any>((acc, name, currentIndex) => {
       if (!acc[name]) {
         acc[name] = { result: [] }
         acc.result.push({

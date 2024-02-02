@@ -1,6 +1,4 @@
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# React technical assessement
 
 To install dependencies use:
 
@@ -17,7 +15,7 @@ pnpm dev
 
 Next, open your browser and visit http://localhost:5173/. The default React project will be running on port 5173.
 
-> Note that is Vite started the app itself the app would be at http://localhost:4000/ instead
+> Note that is Vite started the app itself the port would be 4000 instead ( http://localhost:4000/ )
 
 ## Tests
 

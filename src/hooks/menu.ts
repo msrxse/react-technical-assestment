@@ -7,5 +7,4 @@ export const useMenu = () => {
     queryKey: ['menu'],
     queryFn: getMenu,
   })
-
 }

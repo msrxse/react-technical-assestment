@@ -1,6 +1,6 @@
 import { themeIcons } from 'seti-icons'
 
-export const getIcon = themeIcons({
+const getIcon = themeIcons({
   blue: '#268bd2',
   grey: '#657b83',
   'grey-light': '#839496',
@@ -35,3 +35,4 @@ const SVGFileIcon = ({ icon, size = '22px' }: SVGFileIconProps) => {
 }
 
 export default SVGFileIcon
+export { getIcon }

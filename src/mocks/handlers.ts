@@ -19,7 +19,7 @@ export const App = () => {
       <WidgetList widgets={widgets} />
     </div>
   )
-}`
+}`,
   },
   {
     id: 2,
@@ -28,7 +28,7 @@ export const App = () => {
   { name: 'spadoink', price: 777 },
   { name: 'kafloof', price: 1326 },
   { name: 'sweezil', price: 966 }
-]`
+]`,
   },
   {
     id: 3,
@@ -37,7 +37,7 @@ export const App = () => {
   { name: 'neewumps', price: 138 },
   { name: 'snarcap', price: 5873 },
   { name: 'topwolly', price: 83 }
-]`
+]`,
   },
   {
     id: 4,
@@ -48,7 +48,7 @@ export const App = () => {
   font-family: comic-sans;
   font-size: 1rem;
   background: limegreen;
-}`
+}`,
   },
   {
     id: 5,
@@ -57,7 +57,7 @@ export const App = () => {
   { name: 'plonches', price: 839 },
   { name: 'chopfle', price: 7743 },
   { name: 'kazkabo', price: 9133 }
-]`
+]`,
   },
   {
     id: 6,
@@ -71,7 +71,7 @@ export const Widget = ({ widget }) => {
       <span>\${widget.price / 1000.0}</span>
     </div>
   )
-}`
+}`,
   },
   {
     id: 7,
@@ -91,7 +91,7 @@ export const WidgetList = ({ widgets }) => {
       })}
     </ul>
   )
-}`
+}`,
   },
   {
     id: 8,
@@ -109,8 +109,8 @@ export const WidgetList = ({ widgets }) => {
     <script type="module" src="/src/App.tsx"></script>
     <script type="module" src="/style.css"></script>
   </body>
-</html>`
-  }
+</html>`,
+  },
 ]
 
 export const handlers = [
