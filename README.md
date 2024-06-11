@@ -1,4 +1,4 @@
-# React technical assessement
+# React technical assessment
 
 To install dependencies use:
 
