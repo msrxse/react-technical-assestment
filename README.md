@@ -33,22 +33,24 @@ pnpm test:watch <path-to-file>
 
 ![image 1](assets/2C3D9365-9EBE-40F2-948B-08AA1F9A9B7F.jpeg)
 ![image 2](assets/020752A0-43BD-4C00-96AE-35D1C3743616.jpeg)
-![video 1](assets/528279D5-4654-4304-B7FD-FD9F994424F8_1_102_o.jpeg)
+![video 1](assets/2024-06-12-at-10.00.53.gif)
 
 # About
+
 react-web-IDE is a web based IDE environment. Just like vscode
 
 ## Main Goals
+
 1. Show the files in a nested structure, with separate sections for each folder and file.
 2. Make sure the application can handle file structures of any complexity
 3. Arrange the file tree in a specific order:
-  3.a Folders should be displayed before files
-  3.b All items should be sorted alphabetically, regardless of uppercase or lowercase letters
+   3.a Folders should be displayed before files
+   3.b All items should be sorted alphabetically, regardless of uppercase or lowercase letters
 4. Any changes you make to file contents must persist for the duration of the session and save automatically for the session
 5. Most functionality is tested
 
-
 ## Libraries used:
+
 - monaco-editor (Code Editor)
 - @mui/material (Material UI)
 
