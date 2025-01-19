@@ -33,7 +33,9 @@ pnpm test:watch <path-to-file>
 
 ![image 1](assets/2C3D9365-9EBE-40F2-948B-08AA1F9A9B7F.jpeg)
 ![image 2](assets/020752A0-43BD-4C00-96AE-35D1C3743616.jpeg)
-![video 1](assets/2024-06-12-at-10.00.53.gif)
+
+https://github.com/user-attachments/assets/f7598ee9-5f39-4435-931d-fb3cb8e387ed
+
 
 # About
 
